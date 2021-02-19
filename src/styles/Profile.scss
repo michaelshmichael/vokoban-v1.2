@@ -1,0 +1,145 @@
+.lds-ellipsis {
+    position: relative;
+    margin-top: 300px;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 163px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: rgb(252, 188, 11);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+.profile-container {
+    font-family: 'Krub', sans-serif;
+    margin-left: -10px;
+    margin-top: 80px;
+    overflow: hidden;
+    .sidebar {
+        position: fixed;
+        height: 100%;
+        width: 18%;
+        padding-top: 35px;
+        padding-left: 30px;
+        background-color: rgb(252, 241, 93);
+    }
+    .profile-data-container {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 100%;
+        margin-left: 26%;
+        .username-and-flag-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 400px;
+            height: 80px;
+            margin-top: 20px;
+            .profile-name {
+                font-family: 'Krub', sans-serif;
+                margin-top: 15px;
+            }
+            .native-language-flag {
+                height: 40px;
+                margin-left: 10px;
+                padding-bottom: 5px;
+            }
+        }
+        .member-for {
+            font-family: 'Krub', sans-serif;
+            margin: 0 auto;
+            
+        }
+        .learning-languages-container{
+            font-family: 'Krub', sans-serif;
+            background-color: lightblue;
+            width: 720px;
+            padding-top: 1px;
+            padding-left: 10px;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            
+            .learning-languages-individual{
+                width: 200px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                .learning-languages-individual-button{
+                    height: 30px;
+                    margin-left: 15px;
+                }
+            }
+        }
+        .another-language-div {
+            font-family: 'Krub', sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 20px;
+            background-color: white;
+            .another-language-select {
+                display: flex;
+                flex-direction: row;
+                width: 150px;
+                justify-content: space-between;
+            }
+        }
+        .uibutton, .delete-item-button{cursor:pointer; display:inline-block;height: 25px;outline:0;border:none;vertical-align:baseline;background:#28c423 none; color:rgb(255, 255, 255);font-family: Krub;margin:0 .25em 0 0;text-transform:none;text-shadow:none;font-weight:700;line-height:1em;font-style:normal;text-align:center;text-decoration:none;border-radius:.28571429rem;-webkit-box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;transition:opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;transition:opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;transition:opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease,-webkit-box-shadow .1s ease;will-change:auto;-webkit-tap-highlight-color:transparent}
+        .uibutton:hover, .delete-item-button{background-color:#199400; transform: translateY(2px); background-image:none;-webkit-box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34, 38, 34, 0.15) inset;box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;color:rgb(255, 255, 255)}
+        .uibutton:active, .delete-item-button{background-color:#199400; transform: translateY(1px); background-image:none;-webkit-box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;box-shadow:0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;color:rgb(255, 255, 255)}
+    }
+}
+
+
+

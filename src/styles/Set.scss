@@ -1,0 +1,171 @@
+.set-container {
+    font-family: 'Krub', sans-serif;
+    margin-left: -10px;
+    margin-top: 80px;
+    overflow: hidden;
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        width: 18%;
+        padding-top: 35px;
+        padding-left: 30px;
+        background-color: rgb(252, 241, 93);
+    }
+    .set-main-container {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 100%;
+        margin-left: 22%;
+        .set-title {
+            margin-left: 50px;
+            margin-bottom: 0px;
+            width: 700px;
+        }
+        .word-add {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 50px;
+            width: 750px;
+            .word-add-input {
+                height: 30px;
+                margin-left: 20px;
+            }
+            .bi-plus-circle {
+                margin-left: 20px;
+                font-size: 2.3em;
+            }
+        }
+        .vocabulary-item-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            height: 400px;
+            margin-left: 20px;
+            .vocabulary-item {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(202, 202, 202);
+                
+                border-radius: 25px;
+                transform-style: preserve-3d; 
+                transition: all 0.5s ease;
+            }
+            .vocabulary-item:hover {
+                transform: rotateY(180deg);
+                background-color: rgb(143, 143, 143);
+            }
+            .vocab-front-word {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                box-shadow: black 2px 2px;
+                border-radius: 25px;
+                backface-visibility: hidden;
+            }
+            .vocab-back-explanation {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                box-shadow: black 2px 2px;
+                border-radius: 25px;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.word-input-display {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 150px;
+    left: 400px;
+    height: 100px;
+    width: 400px;
+    background-color: rgb(169, 169, 253);
+    padding: 100px;
+    border: 2px solid black;
+    opacity: 0.9;
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+}
+
+.word-input-hidden {
+    display: none;
+}
+
+.lds-ellipsis {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 48%;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 163px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: rgb(252, 188, 11);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
